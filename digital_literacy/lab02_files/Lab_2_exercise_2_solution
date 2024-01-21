@@ -1,0 +1,10 @@
+Задание 2
+Преобразовать текст, обрамленный в звездочки, в курсив. Не трогать текст в двойных
+звездочках (жирный). Использовать команду sed.
+Примеры:
+*this is italic*" => <em>this is italic</em>
+**bold text (not italic)** => **bold text (not italic)**
+
+
+sed -i '/\*\*/! s/\*\(.*\)\*/<em>\1<\/em>/g' exercise_2_text
+sed -i 's/<em>\(.*\)<\/em>/\*\1\*/g' exercise_2_text

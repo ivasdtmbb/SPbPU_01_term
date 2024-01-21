@@ -1,0 +1,11 @@
+\babel@toc {russian}{}\relax 
+\contentsline {section}{\numberline {1}Реализация и анализ применения различных структур данных}{4}{}%
+\contentsline {subsection}{\numberline {1.1}Массив строк}{4}{}%
+\contentsline {subsection}{\numberline {1.2}Массив символов}{6}{}%
+\contentsline {subsection}{\numberline {1.3}Массив структур}{9}{}%
+\contentsline {subsection}{\numberline {1.4}Структура массивов}{11}{}%
+\contentsline {subsection}{\numberline {1.5}Массив структур с использованием хвостовой рекурсии при обработке данных}{13}{}%
+\contentsline {subsection}{\numberline {1.6}Структура массивов с использованием хвостовой рекурсии при обработке данных}{15}{}%
+\contentsline {subsection}{\numberline {1.7}Динамический однонаправленный список}{17}{}%
+\contentsline {section}{\numberline {2}Сравнение реализаций}{19}{}%
+\contentsline {section}{\numberline {3}Заключение}{20}{}%

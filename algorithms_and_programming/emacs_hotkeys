@@ -1,0 +1,17 @@
+    tree-mode
+
+    (define-key map " " 'scroll-up)
+    (define-key map "\C-?" 'scroll-down)
+    (define-key map "D" 'tree-mode-delete-tree)
+    (define-key map "p" 'tree-mode-previous-node)
+    (define-key map "n" 'tree-mode-next-node)
+    (define-key map "j" 'tree-mode-next-sib)
+    (define-key map "k" 'tree-mode-previous-sib)
+    (define-key map "u" 'tree-mode-goto-parent)
+    (define-key map "r" 'tree-mode-goto-root)
+    (define-key map "g" 'tree-mode-reflesh)
+    (define-key map "E" 'tree-mode-expand-level)
+    (define-key map "e" 'tree-mode-toggle-expand)
+    (define-key map "s" 'tree-mode-sort-by-tag)
+    (define-key map "/" 'tree-mode-keep-match)
+    (define-key map "!" 'tree-mode-collapse-other-except)

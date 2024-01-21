@@ -1,0 +1,28 @@
+# create a file that was accessed more than 100 days ago
+touch -t 201901010000 f1
+
+# check the file's status
+stat 'fielname'
+
+# find using example with a -maxdepth parameter
+find . -maxdepth 2 -name "*.png" -ls
+
+# delete files that were accessed more than 100 days ago
+find . -atime +100 -delete
+
+# delete files that were accessed more than 100 days ago with a prompt before deleting
+find . -atime +100 -exec rm -i '{}' \;
+
+# copy all the files with an extension ".png" from and to specified directories (in the example below the destination directory is a current working directory "./lab_01_files/")
+find /home/ivasdtmbb/ -maxdepth 2 -name "*.png" -exec cp '{}' ./lab_01_files/ \;
+
+# move all the files with an extension ".png" from and to specified directories
+#in the example below the destination directory is a current working directory "./lab_01_files/"
+
+find /home/ivasdtmbb/ -maxdepth 2 -name "*.png" -exec mv -i '{}' ./lab_01_files/ \;
+
+# find files which contains "hello" string
+# (grep binary files as a text files to avoid an error messages)
+find /home/ivasdtmbb/my_code/hexlet-java/ -exec grep -raiw "hello" '{}' \;
+
+find /home/ivasdtmbb/00_SPBPU_Politech_data/ -type f -maxdepth 1 -exec grep -nsiwoa "hello" '{}' \;

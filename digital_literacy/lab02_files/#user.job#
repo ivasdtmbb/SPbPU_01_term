@@ -1,0 +1,15 @@
+#at now + 1 minute
+
+INITFILES=/home/ivasdtmbb/00_SPBPU_Politech_mycode/digital_literacy/
+
+GENERALCHECK=[[:punct:]]?[[:alpha:]][[:alnum:].-]*@[[:alnum:].-]+[\.][[:alpha:][:punct:]]{2,5}
+                                                                                         
+BEGENDCHECK=^[a-zA-Z\:\(].*[a-zA-Z\:\)\.]$
+PUNCTCHECK=[-.][-.] # use inverting parameter -v (--invert-match) for grep
+
+find $INITFILES -name "***" -exec grep -Ehiow $GENERALCHECK '{}' \; | grep -o $BEGENDCHECK | grep -v $PUNCTCHECK | grep -io "[a-z].*[a-z]" | tr [:upper:] [:lower:] | sort -u > ~/my_code/base.txt
+
+
+[2:42 AM] Петров Александр Владимирович
+
+[:alpha:]([._-]?[:alnum:])+@

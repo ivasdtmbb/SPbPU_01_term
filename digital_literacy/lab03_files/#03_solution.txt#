@@ -1,0 +1,23 @@
+1.
+   apropos reverse
+   man tac (whatis)
+   grep 'a' example.txt | tac
+
+2.
+   redirect STERR (2>) to logfile (append it to the end) 2>&1 is
+   conjunction of STERR stream with STOUT stream (old notation), could
+   be changed with an expression:
+   ls -y &>> logfile
+   2>&1 - sterr redirected with the same direction with the stout
+
+3.
+   tail -n +87 rc.lua.template | head -n 12
+
+4.
+   ls ls_out fi1 fi2 fi3 1>/dev/null 1<&2 | cat -n | tee ls_log
+
+   ls ls_out fi1 fi2 fi3 2>&1 1>/dev/null | cat -n | tee ls_log
+
+
+3>&2 2>&1 1>&3      ..... cat -n > ls_log | 3>&-
+
